@@ -3,7 +3,7 @@ import '/widgets/my_title.dart';
 
 import '../widgets/about/about_info_text_type.dart';
 import '../widgets/about/about_info_text_value.dart';
-import '../widgets/nutrition_badge.dart';
+import '../widgets/food_type.dart';
 
 class DetailsPage extends StatelessWidget {
   final Map? data;

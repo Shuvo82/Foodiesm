@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/widgets/nutrition_badge.dart';
+import '/widgets/food_type.dart';
 
 class MyTitle extends StatelessWidget {
   final String name;

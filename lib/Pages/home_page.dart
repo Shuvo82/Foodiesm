@@ -112,7 +112,7 @@ class HomePage extends StatelessWidget {
                       name: "${FoodData![index]!["name"]}",
                       image: "${FoodData![index]!["img"]}",
                       num: "${FoodData![index]!["id"]}",
-                      types: "${FoodData![index]!["type"]}",
+                      types:"${FoodData![index]!["type"]}",
                       food_map: FoodData![index],
                     );
                   },

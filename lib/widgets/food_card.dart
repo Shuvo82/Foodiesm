@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import '/Pages/details_page.dart';
 
-
-import 'nutrition_badge.dart';
+import 'food_type.dart';
 
 class FoodCard extends StatelessWidget {
   final String name;
@@ -26,7 +25,7 @@ class FoodCard extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => DetailsPage( data: food_map),
+            builder: (context) => DetailsPage(data: food_map),
             //builder: (context) => DetailsPage( data: pokemon_map),
           ),
         );
@@ -51,15 +50,15 @@ class FoodCard extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "${food_map!["name"]}",
-                      style: const TextStyle(color: Colors.white,
-                          fontSize: 20,),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
-                  FoodType(text: "${food_map!["type"]}"),
+                  for(String item in food_map!["type"])
+                    FoodType(text: item),
 
-
-                  // for(String item in food_map!["type"])
-                  //   PowerBadge(text: item),
                   // // PowerBadge(
                   // //   text: "${pokemon_map!["type"][0]}",
                   // // ),
@@ -67,14 +66,13 @@ class FoodCard extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 70.0,right: 10),
+                padding: const EdgeInsets.only(bottom: 70.0, right: 10),
                 child: Text(
                   "${food_map!["id"]}",
                   style: const TextStyle(color: Colors.white),
                 ),
               ),
             ],
-
           ),
           //width: double.infinity,
         ),
@@ -92,5 +90,3 @@ class FoodCard extends StatelessWidget {
     );
   }
 }
-
-

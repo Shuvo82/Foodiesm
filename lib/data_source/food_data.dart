@@ -4,7 +4,7 @@ class FoodDataSource {
       "id": "1",
       "name": "Apple",
       "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
-      "type":"Fruit",
+      "type":["Fruit","Vegetable"],
       //this information is for per 100 gram of this fruit
       "vitamin": ["C", "Poison"],
       "calories": "52",
