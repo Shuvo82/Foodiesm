@@ -15,5 +15,7 @@ class FoodDataSource {
 
     },
 
+    //other food info will be added here
+
   ];
 }

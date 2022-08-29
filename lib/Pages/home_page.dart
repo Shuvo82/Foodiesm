@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import '../data_source/food_data.dart';
 
@@ -38,11 +39,19 @@ class HomePage extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            Scaffold.of(context).openDrawer();
-          },
+        automaticallyImplyLeading: true,
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              icon: const Icon(Icons.menu,
+                  color: Colors.black),
+              onPressed: () {
+                print("clicked");
+
+                Scaffold.of(context).openDrawer();
+              },
+            );
+          }
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -67,7 +76,7 @@ class HomePage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.only(left: 7),
                 child: Text(
-                  "foodiesm",
+                  "Foodiesm",
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
