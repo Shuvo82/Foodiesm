@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class PowerBadge extends StatelessWidget {
+class FoodType extends StatelessWidget {
   final String text;
 
-  const PowerBadge({Key? key, required this.text}) : super(key: key);
+  const FoodType({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

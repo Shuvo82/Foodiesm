@@ -37,8 +37,8 @@ class MyTitle extends StatelessWidget {
               ),
               Row(
                 children: [
-                  PowerBadge(text: "fire"),
-                  PowerBadge(text: "Water"),
+                  FoodType(text: "fire"),
+                  FoodType(text: "Water"),
                 ],
               ),
             ],

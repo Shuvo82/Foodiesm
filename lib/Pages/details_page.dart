@@ -69,7 +69,7 @@ class DetailsPage extends StatelessWidget {
                             Row(
                               children: [
                                 for (String item in data!['type'])
-                                  PowerBadge(text: item,),
+                                  FoodType(text: item,),
                                 // PowerBadge(text: "${data!['type[0]']}"),
                                 // PowerBadge(text: "${data!['type[0]']}"),
                               ],

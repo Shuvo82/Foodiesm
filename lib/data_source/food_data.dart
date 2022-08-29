@@ -1,7 +1,7 @@
 class FoodDataSource {
   static List<Map?>foods = [
     {
-      "id": 1,
+      "id": "1",
       "name": "Apple",
       "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
       "type":"Fruit",

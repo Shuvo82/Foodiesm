@@ -4,6 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import '../data_source/food_data.dart';
 
 import '../widgets/food_card.dart';
+import 'setting.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -40,28 +41,35 @@ class HomePage extends StatelessWidget {
       ),
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        leading: Builder(
-          builder: (context) {
-            return IconButton(
-              icon: const Icon(Icons.menu,
-                  color: Colors.black),
-              onPressed: () {
-                print("clicked");
+        leading: Builder(builder: (context) {
+          return IconButton(
+            icon: const Icon(Icons.menu, color: Colors.black),
+            onPressed: () {
+              print("clicked");
 
-                Scaffold.of(context).openDrawer();
-              },
-            );
-          }
-        ),
+              Scaffold.of(context).openDrawer();
+            },
+          );
+        }),
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.only(right: 20.0),
-            child: Icon(
-              Icons.list,
-              size: 30,
-              color: Colors.black,
+            padding: EdgeInsets.only(right: 10.0),
+            child: IconButton(
+              icon: const Icon(
+                Icons.settings,
+                size: 29,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                  return Setting();
+                }));
+
+
+               // print("clicked");
+              },
             ),
           )
         ],
@@ -103,20 +111,12 @@ class HomePage extends StatelessWidget {
                     return FoodCard(
                       name: "${FoodData![index]!["name"]}",
                       image: "${FoodData![index]!["img"]}",
-                      num: "${FoodData![index]!["num"]}",
-                      types: [
-                        FoodData![index]!.containsKey("type")
-                            ? FoodData![index]!["type"][0]
-                            : "",
-                        FoodData![index]!.containsKey("type")
-                            ? FoodData![index]!["type"][0]: "", //index 1 er value sb somoy thake na
-                      ],
+                      num: "${FoodData![index]!["id"]}",
+                      types: "${FoodData![index]!["type"]}",
                       food_map: FoodData![index],
                     );
                   },
                 ),
-
-
               ),
             ),
           ],

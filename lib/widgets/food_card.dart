@@ -7,7 +7,7 @@ import 'nutrition_badge.dart';
 class FoodCard extends StatelessWidget {
   final String name;
   final String num;
-  final List<String> types;
+  final String types;
   final String image;
   final Map? food_map;
 
@@ -55,18 +55,21 @@ class FoodCard extends StatelessWidget {
                           fontSize: 20,),
                     ),
                   ),
-                  for(String item in food_map!["type"])
-                    PowerBadge(text: item),
-                  // PowerBadge(
-                  //   text: "${pokemon_map!["type"][0]}",
-                  // ),
-                  // PowerBadge(text: "${pokemon_map!["type"][0]}"),
+                  FoodType(text: "${food_map!["type"]}"),
+
+
+                  // for(String item in food_map!["type"])
+                  //   PowerBadge(text: item),
+                  // // PowerBadge(
+                  // //   text: "${pokemon_map!["type"][0]}",
+                  // // ),
+                  // // PowerBadge(text: "${pokemon_map!["type"][0]}"),
                 ],
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 70.0,right: 10),
                 child: Text(
-                  "${food_map!["num"]}",
+                  "${food_map!["id"]}",
                   style: const TextStyle(color: Colors.white),
                 ),
               ),
