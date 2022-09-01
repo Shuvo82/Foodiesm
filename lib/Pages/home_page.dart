@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../data_source/food_data.dart';
 
@@ -24,14 +25,20 @@ class HomePage extends StatelessWidget {
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
                 ),
-
                 color: Colors.blue,
+                image: DecorationImage(
+                  image: AssetImage("assets/images/img.png"),
+                  fit: BoxFit.cover,
+                ),
               ),
-              child: Text('Food app'),
+              child: Text('Foodiesm',
+                  style: TextStyle(
+
+                    color: Colors.white,
+                    fontSize: 30,
+                  )),
             ),
             ListTile(
-
-
               title: const Text('Home'),
               onTap: () {
                 Navigator.pushNamed(context, '/home');
@@ -47,7 +54,6 @@ class HomePage extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
-
         automaticallyImplyLeading: true,
         leading: Builder(builder: (context) {
           return IconButton(
@@ -71,12 +77,12 @@ class HomePage extends StatelessWidget {
                 color: Colors.black,
               ),
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
                   return Settings();
                 }));
 
-
-               // print("clicked");
+                // print("clicked");
               },
             ),
           )
@@ -90,7 +96,7 @@ class HomePage extends StatelessWidget {
             const Expanded(
               flex: 1,
               child: Padding(
-                padding:  EdgeInsets.only(left: 7),
+                padding: EdgeInsets.only(left: 7),
                 child: Text(
                   "Foodiesm",
                   style: TextStyle(
@@ -120,7 +126,7 @@ class HomePage extends StatelessWidget {
                       name: "${FoodData![index]!["name"]}",
                       image: "${FoodData![index]!["img"]}",
                       num: "${FoodData![index]!["id"]}",
-                      types:"${FoodData![index]!["type"]}",
+                      types: "${FoodData![index]!["type"]}",
                       food_map: FoodData![index],
                     );
                   },

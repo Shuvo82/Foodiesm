@@ -9,9 +9,9 @@ void main() {
 class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Setting',
       home: MyHomePage(),
     );
   }
@@ -19,7 +19,7 @@ class Settings extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
 
-  MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({Key? key}) : super(key: key);
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -44,23 +44,23 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Colors.black,
           ),
         ),
-        title: Text('Settings'),
+        title: const Text('Settings'),
       ),
       body: SettingsList(
         sections: [
           SettingsSection(
-            title: Text('Common'),
+            title: const Text('Common'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
-                leading: Icon(Icons.language),
-                title: Text('Language'),
-                value: Text('English'),
+                leading: const Icon(Icons.language),
+                title: const Text('Language'),
+                value: const Text('English'),
               ),
               SettingsTile.switchTile(
                 onToggle: (value) {},
                 initialValue: true,
-                leading: Icon(Icons.format_paint),
-                title: Text('Enable custom theme'),
+                leading: const Icon(Icons.format_paint),
+                title: const Text('Enable custom theme'),
               ),
             ],
           ),
