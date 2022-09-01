@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../data_source/food_data.dart';
+import '../data_source/fruit_data.dart';
 
 import '../widgets/food_card.dart';
 import 'setting.dart';
@@ -32,11 +32,12 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               child: Text('Foodiesm',
-                  style: TextStyle(
 
+                  style: TextStyle(
                     color: Colors.white,
                     fontSize: 30,
-                  )),
+                  ),
+              ),
             ),
             ListTile(
               title: const Text('Home'),
