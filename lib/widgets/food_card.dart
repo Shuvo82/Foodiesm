@@ -56,8 +56,7 @@ class FoodCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  for(String item in food_map!["type"])
-                    FoodType(text: item),
+                  for (String item in food_map!["type"]) FoodType(text: item),
 
                   // // PowerBadge(
                   // //   text: "${pokemon_map!["type"][0]}",

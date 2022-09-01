@@ -18,20 +18,27 @@ class HomePage extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(
-              child: Text('Food app'),
+            const DrawerHeader(
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+
                 color: Colors.blue,
               ),
+              child: Text('Food app'),
             ),
             ListTile(
-              title: Text('Home'),
+
+
+              title: const Text('Home'),
               onTap: () {
                 Navigator.pushNamed(context, '/home');
               },
             ),
             ListTile(
-              title: Text('About'),
+              title: const Text('About'),
               onTap: () {
                 Navigator.pushNamed(context, '/about');
               },
@@ -40,6 +47,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       appBar: AppBar(
+
         automaticallyImplyLeading: true,
         leading: Builder(builder: (context) {
           return IconButton(
@@ -55,7 +63,7 @@ class HomePage extends StatelessWidget {
         elevation: 0,
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 10.0),
+            padding: const EdgeInsets.only(right: 10.0),
             child: IconButton(
               icon: const Icon(
                 Icons.settings,
@@ -64,7 +72,7 @@ class HomePage extends StatelessWidget {
               ),
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                  return Setting();
+                  return Settings();
                 }));
 
 
@@ -82,7 +90,7 @@ class HomePage extends StatelessWidget {
             const Expanded(
               flex: 1,
               child: Padding(
-                padding: const EdgeInsets.only(left: 7),
+                padding:  EdgeInsets.only(left: 7),
                 child: Text(
                   "Foodiesm",
                   style: TextStyle(
@@ -97,7 +105,7 @@ class HomePage extends StatelessWidget {
             ),
             Expanded(
               flex: 18,
-              child: Container(
+              child: SizedBox(
                 height: 650,
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

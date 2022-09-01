@@ -70,15 +70,14 @@ class DetailsPage extends StatelessWidget {
                               children: [
                                 for (String item in data!['type'])
                                   FoodType(text: item,),
-                                // PowerBadge(text: "${data!['type[0]']}"),
-                                // PowerBadge(text: "${data!['type[0]']}"),
+
                               ],
                             ),
                           ],
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 20, right: 30),
-                          child: Text("${data!['num']}",
+                          child: Text("${data!['id']}",
                               style:
                                   const TextStyle(color: Colors.white, fontSize: 20)),
                         )
@@ -106,10 +105,10 @@ class DetailsPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               //mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                AboutInfoTextType(text: "candy"),
-                                AboutInfoTextType(text: "Height"),
-                                AboutInfoTextType(text: "Weight"),
-                                AboutInfoTextType(text: "Abilities"),
+                                AboutInfoTextType(text: "Vitamin"),
+                                AboutInfoTextType(text: "iron"),
+                                AboutInfoTextType(text: "Calcium"),
+                                AboutInfoTextType(text: "Carbohydrate"),
                                 const SizedBox(
                                   height: 1,
                                 ),
@@ -142,16 +141,6 @@ class DetailsPage extends StatelessWidget {
                                   height: 1,
                                 ),
 
-                                // "height": "0.71 m",
-                                // "weight": "6.9 kg",
-                                // "candy": "Bulbasaur Candy",
-                                // "candy_count": 25,
-                                // "egg": "2 km",
-                                // "spawn_chance": 0.69,
-                                // "avg_spawns": 69,
-                                // "spawn_time": "20:00",
-                                // "multipliers": [
-                                // 1.58
 
                                 const SizedBox(
                                   height: 1,
