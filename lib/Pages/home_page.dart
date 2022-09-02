@@ -69,6 +69,11 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
+
+
+
+
+
           Padding(
             padding: const EdgeInsets.only(right: 10.0),
             child: IconButton(

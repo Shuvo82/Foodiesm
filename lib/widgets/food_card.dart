@@ -77,11 +77,15 @@ class FoodCard extends StatelessWidget {
         ),
         Positioned(
           right: -6,
+          height: 120,
+          width: 120,
           bottom: -7,
           child: Hero(
             tag: "${food_map!["name"]}",
             child: Image.network(
               "${food_map!["img"]}",
+
+              fit: BoxFit.cover,
             ),
           ),
         )
