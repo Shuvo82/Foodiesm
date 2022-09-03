@@ -31,6 +31,9 @@ dependencies:
   google_fonts: ^3.0.1
   settings_ui: ^2.0.2
   introduction_screen: ^3.0.1
+  flutter_onboarding_slider: ^1.0.7
+  onboarding_animation: ^0.0.1
+
   flutter:
     sdk: flutter
 

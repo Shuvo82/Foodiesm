@@ -17,7 +17,7 @@ class FoodDataSource {
     {
       "id": "2",
       "name": "Avocado",
-      "img":"",
+      "img":"https://lh3.googleusercontent.com/LmHkJR7hUD42X_l_kKF40nZBTcCuD9NFkYEdqLJG9MWNBo5HrCceziS6EIOgj_qm3ik=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamin": ["C", "B6", "E", "K"],
@@ -30,7 +30,7 @@ class FoodDataSource {
     {
       "id": "3",
       "name": "Banana",
-      "img": "",
+      "img": "https://lh3.googleusercontent.com/LmHkJR7hUD42X_l_kKF40nZBTcCuD9NFkYEdqLJG9MWNBo5HrCceziS6EIOgj_qm3ik=w2400",
       "type": ["Fruit", "Vegetable"],
       //this information is for per 100 gram of this fruit
       "vitamin": ["C", "D", "B6"],

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:foodiesm/Pages/introduction.dart';
+import 'package:foodiesm/Pages/on_boarding/on_boarding_page.dart';
+import 'package:foodiesm/Pages/splash_screen.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 import '../data_source/fruit_data.dart';
@@ -42,9 +44,12 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              title: const Text('Home'),
+              title: const Text('splash'),
               onTap: () {
-                Navigator.pushNamed(context, '/home');
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return SplashScreen();
+                }));
               },
             ),
             ListTile(
@@ -61,7 +66,7 @@ class HomePage extends StatelessWidget {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) {
-                  return Introduction();
+                  return OnBoardingPage1();
                 }));
               },
             ),
