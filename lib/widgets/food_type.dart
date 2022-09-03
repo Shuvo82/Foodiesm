@@ -14,7 +14,7 @@ class FoodType extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 4),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(22),
-            color: const Color(0xff5ce35d).withOpacity(0.6)
+            color: const Color(0xff5ce3d3).withOpacity(0.6)
         ),
         child: Text(
           text,
