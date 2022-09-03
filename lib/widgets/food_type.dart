@@ -10,10 +10,10 @@ class FoodType extends StatelessWidget {
     return Container(
         // height: 25,
         // width: 60,
-        margin: const EdgeInsets.only(left: 16, top: 6),
+        margin: const EdgeInsets.only(left: 6, top: 0),
         padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 4),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(22),
+            borderRadius: BorderRadius.circular(20),
             color: const Color(0xff93ece5).withOpacity(0.6)
         ),
         child: Text(

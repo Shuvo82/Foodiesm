@@ -96,26 +96,26 @@ class HomePage extends StatelessWidget {
         }),
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 10.0),
-            child: IconButton(
-              icon: const Icon(
-                Icons.settings,
-                size: 29,
-                color: Colors.black,
-              ),
-              onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return Settings();
-                }));
-
-                // print("clicked");
-              },
-            ),
-          )
-        ],
+        // actions: [
+        //   Padding(
+        //     padding: const EdgeInsets.only(right: 10.0),
+        //     child: IconButton(
+        //       icon: const Icon(
+        //         Icons.settings,
+        //         size: 29,
+        //         color: Colors.black,
+        //       ),
+        //       onPressed: () {
+        //         Navigator.of(context)
+        //             .push(MaterialPageRoute(builder: (context) {
+        //           return Settings();
+        //         }));
+        //
+        //         // print("clicked");
+        //       },
+        //     ),
+        //   )
+        // ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '/Pages/details_page.dart';
+import 'package:foodiesm/widgets/food_type.dart';
 
 import 'food_type.dart';
 
@@ -45,15 +46,16 @@ class FoodCard extends StatelessWidget {
               ),
               borderRadius: BorderRadius.circular(15),
               color: const Color(0xff49D0B0)),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(top: 0.0, left: 8),
                     child: Text(
                       "${food_map!["name"]}",
                       style: const TextStyle(
@@ -62,22 +64,33 @@ class FoodCard extends StatelessWidget {
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  for (String item in food_map!["type"]) FoodType(text: item),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                        color: const Color(0xff3CB589),
+                        borderRadius: BorderRadius.circular(15),
 
-                  // // PowerBadge(
-                  // //   text: "${pokemon_map!["type"][0]}",
-                  // // ),
-                  // // PowerBadge(text: "${pokemon_map!["type"][0]}"),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "V${food_map!["vitamin"][0]}",
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ),
+
+
+
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 70.0, right: 10),
-                child: Text(
-                  "${food_map!["id"]}",
-                  style: const TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.w600),
-                ),
-              ),
+              FoodType(text: "${food_map!["type"][0]}"),
             ],
           ),
           //width: double.infinity,
