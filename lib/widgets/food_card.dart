@@ -33,13 +33,11 @@ class FoodCard extends StatelessWidget {
       child: Stack(children: [
         Container(
           height: double.infinity,
-
           width: double.infinity,
-
           decoration: BoxDecoration(
             gradient: const LinearGradient(
               begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+              end: Alignment.bottomRight,
               colors: [
                 Color(0xffdbf8ed),
                 Color(0xffe1fff4),
@@ -62,7 +60,7 @@ class FoodCard extends StatelessWidget {
                       "${food_map!["name"]}",
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 20,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold
                       ),
                     ),
