@@ -1,7 +1,6 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import '../home_page.dart';
 
@@ -12,7 +11,7 @@ void main() {
 class OnBoardingPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: MyHome(),
     );
@@ -20,17 +19,21 @@ class OnBoardingPage1 extends StatelessWidget {
 }
 
 class MyHome extends StatelessWidget {
-  final Color kDarkBlueColor = Color(0xFF3D0549);
+  final Color kDarkBlueColor = const Color(0xFF3D0549);
 
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
-      finishButtonText: 'Register',
+      finishButtonText: 'Lets go',
       onFinish: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) {
-          return HomePage();
-        }));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => HomePage(),
+          ),
+        );
+
+
       },
       finishButtonColor: kDarkBlueColor,
       skipTextButton: Text(
@@ -41,25 +44,23 @@ class MyHome extends StatelessWidget {
           fontWeight: FontWeight.w600,
         ),
       ),
-      trailing: Text(
-        'login',
-        style: TextStyle(
-          fontSize: 16,
-          color: kDarkBlueColor,
-          fontWeight: FontWeight.w600,
-        ),
-      ),
-      trailingFunction: () {
-        Navigator.push(
-          context,
-          CupertinoPageRoute(
-            builder: (context) => HomePage(),
-          ),
-        );
-      },
+      // trailing: Text(
+      //   'login',
+      //   style: TextStyle(
+      //     fontSize: 16,
+      //     color: kDarkBlueColor,
+      //     fontWeight: FontWeight.w600,
+      //   ),
+      // ),
+      // trailingFunction: () {
+      //   Navigator.of(context)
+      //       .push(MaterialPageRoute(builder: (context) {
+      //     return HomePage();
+      //   }));
+      // },
       controllerColor: kDarkBlueColor,
       totalPage: 3,
-      headerBackgroundColor: Colors.white,
+      headerBackgroundColor: Color(0xffffffff),
       pageBackgroundColor: Colors.white,
       background: [
         Image.asset(
@@ -67,11 +68,11 @@ class MyHome extends StatelessWidget {
           height: 400,
         ),
         Image.asset(
-          'assets/slide_2.png',
+          'assets/images/rownok.png',
           height: 400,
         ),
         Image.asset(
-          'assets/slide_3.png',
+          'assets/images/maliha.jpg',
           height: 400,
         ),
       ],
@@ -83,7 +84,7 @@ class MyHome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(
+              const SizedBox(
                 height: 480,
               ),
               Text(
@@ -95,10 +96,10 @@ class MyHome extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'to find the perfect looking Onboarding for your app?',
                 textAlign: TextAlign.center,
                 style: TextStyle(
