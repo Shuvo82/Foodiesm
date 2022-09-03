@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:foodiesm/Pages/introduction.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../data_source/fruit_data.dart';
 
 import '../widgets/food_card.dart';
+import 'about.dart';
 import 'setting.dart';
 
 class HomePage extends StatelessWidget {
@@ -31,12 +33,12 @@ class HomePage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              child: Text('Foodiesm',
-
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                  ),
+              child: Text(
+                'Foodiesm',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                ),
               ),
             ),
             ListTile(
@@ -46,9 +48,30 @@ class HomePage extends StatelessWidget {
               },
             ),
             ListTile(
+              title: const Text('Setting'),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return Settings();
+                }));
+              },
+            ),
+            ListTile(
+              title: const Text('Introduction'),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return Introduction();
+                }));
+              },
+            ),
+            ListTile(
               title: const Text('About'),
               onTap: () {
-                Navigator.pushNamed(context, '/about');
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return About();
+                }));
               },
             ),
           ],
@@ -69,11 +92,6 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-
-
-
-
-
           Padding(
             padding: const EdgeInsets.only(right: 10.0),
             child: IconButton(
