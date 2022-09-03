@@ -41,8 +41,8 @@ class FoodCard extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color(0xff46ef31),
-                Color(0xffc9e0c8),
+                Color(0xffeafbff),
+                Color(0xfff5fffb),
               ],
             ),
 
@@ -61,8 +61,9 @@ class FoodCard extends StatelessWidget {
                     child: Text(
                       "${food_map!["name"]}",
                       style: const TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontSize: 20,
+                        fontWeight: FontWeight.bold
                       ),
                     ),
                   ),
@@ -78,7 +79,9 @@ class FoodCard extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 70.0, right: 10),
                 child: Text(
                   "${food_map!["id"]}",
-                  style: const TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.black,
+                  fontWeight: FontWeight.w600
+                  ),
                 ),
               ),
             ],
