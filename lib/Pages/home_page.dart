@@ -145,9 +145,9 @@ class HomePage extends StatelessWidget {
                 child: GridView.builder(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    childAspectRatio: 0.8,
-                    mainAxisSpacing: 20,
-                    crossAxisSpacing: 20,
+                    childAspectRatio: 1,
+                    mainAxisSpacing: 15,
+                    crossAxisSpacing: 15,
                   ),
                   itemCount: FoodData!.length,
                   itemBuilder: (context, index) {

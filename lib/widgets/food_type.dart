@@ -20,7 +20,7 @@ class FoodType extends StatelessWidget {
           text,
           style: const TextStyle(
               color: Color(0xff000000),
-              fontSize: 18),
+              fontSize: 13),
         ));
   }
 }

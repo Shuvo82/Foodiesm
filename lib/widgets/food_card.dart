@@ -35,17 +35,15 @@ class FoodCard extends StatelessWidget {
           height: double.infinity,
           width: double.infinity,
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomRight,
-              colors: [
-                Color(0xffdbf8ed),
-                Color(0xffe1fff4),
-              ],
-            ),
-
-
-              borderRadius: BorderRadius.circular(19),
+              gradient: const LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xffdbf8ed),
+                  Color(0xffe1fff4),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(15),
               color: const Color(0xff49D0B0)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -59,10 +57,9 @@ class FoodCard extends StatelessWidget {
                     child: Text(
                       "${food_map!["name"]}",
                       style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold
-                      ),
+                          color: Colors.black,
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                   for (String item in food_map!["type"]) FoodType(text: item),
@@ -77,9 +74,8 @@ class FoodCard extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 70.0, right: 10),
                 child: Text(
                   "${food_map!["id"]}",
-                  style: const TextStyle(color: Colors.black,
-                  fontWeight: FontWeight.w600
-                  ),
+                  style: const TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.w600),
                 ),
               ),
             ],
@@ -88,14 +84,13 @@ class FoodCard extends StatelessWidget {
         ),
         Positioned(
           right: -6,
-          height: 100,
-          width: 100,
+          height: 80,
+          width: 80,
           bottom: -7,
           child: Hero(
             tag: "${food_map!["name"]}",
             child: Image.network(
               "${food_map!["img"]}",
-
               fit: BoxFit.cover,
             ),
           ),
