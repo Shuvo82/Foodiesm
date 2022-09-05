@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import '../home_page.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(OnBoardingPage1());

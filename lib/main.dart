@@ -3,7 +3,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:foodiesm/Pages/splash_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
-import 'Pages/home_page.dart';
+
 
 void main() {
   runApp( MyApp());
@@ -16,7 +16,8 @@ class MyApp extends StatelessWidget {
       title: 'Foodiesm',
 
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home:
+      SplashScreen(),
 
 
     //   AnimatedSplashScreen(

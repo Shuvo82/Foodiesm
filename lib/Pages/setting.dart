@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodiesm/Pages/home_page.dart';
+
+import 'home_page.dart';
 import 'package:settings_ui/settings_ui.dart';
 
 void main() {
@@ -34,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => const HomePage(),
+                builder: (context) =>  HomePage(),
                 //builder: (context) => DetailsPage( data: pokemon_map),
               ),
             );

@@ -30,7 +30,7 @@ class DetailsPage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(right: 20.0),
             child: Icon(
-              Icons.list,
+              Icons.favorite_border,
               size: 30,
               color: Colors.black,
             ),

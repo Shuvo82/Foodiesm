@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodiesm/Pages/on_boarding/on_boarding_page.dart';
+import 'package:foodiesm/Pages/on_boarding_page.dart';
+
 
 import 'home_page.dart';
 
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _navigateToHome() async {
-    await Future.delayed(const Duration(milliseconds: 3000 ), () {});
+    await Future.delayed(const Duration(milliseconds: 1500 ), () {});
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => OnBoardingPage1()));
   }
