@@ -41,7 +41,7 @@ class FoodCard extends StatelessWidget {
               color: const Color(0x2893ece5)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            // crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -89,10 +89,10 @@ class FoodCard extends StatelessWidget {
           //width: double.infinity,
         ),
         Positioned(
-          right: -6,
-          height: 80,
-          width: 80,
-          bottom: -7,
+          right: -0,
+          height: 90,
+          width: 90,
+          bottom: -2,
           child: Hero(
             tag: "${food_map!["name"]}",
             child: Image.network(

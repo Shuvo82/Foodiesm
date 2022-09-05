@@ -6,6 +6,7 @@ class FoodDataSource {
       "img":
           "https://lh6.googleusercontent.com/9BsZ53BEI8iBj5t9FsXs6-X7KeLklQwNOxcsNkf94tG6JURr3X3DJ8_tczUGygrW9mw=w2400",
       "type": ["Fruit"],
+
       //this information is for per 100 gram of this fruit
       "vitamin": ["C", "B6", "d"],
       "calories": "52",

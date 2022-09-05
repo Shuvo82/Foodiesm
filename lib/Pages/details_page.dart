@@ -13,7 +13,7 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff51CFB0),
+      backgroundColor: const Color(0xffb7fffa),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -46,7 +46,12 @@ class DetailsPage extends StatelessWidget {
                 Expanded(
                   flex: 3,
                   child: Container(
-                    color: const Color(0xff51CFB0),
+                    decoration: BoxDecoration(
+                      color: const Color(0xffb7fffa),
+                      borderRadius: BorderRadius.circular(15),
+
+                    ),
+
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,10 +66,13 @@ class DetailsPage extends StatelessWidget {
                                 "${data!['name']}",
                                 style: const TextStyle(
                                   fontSize: 30,
-                                  color: Colors.white,
+                                  color: Colors.black,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
+                            ),
+                            const SizedBox(
+                              height: 10,
                             ),
                             Row(
                               children: [
@@ -79,7 +87,7 @@ class DetailsPage extends StatelessWidget {
                           padding: const EdgeInsets.only(top: 20, right: 30),
                           child: Text("${data!['id']}",
                               style:
-                                  const TextStyle(color: Colors.white, fontSize: 20)),
+                                  const TextStyle(color: Colors.black, fontSize: 20)),
                         )
                       ],
                     ),
@@ -91,8 +99,8 @@ class DetailsPage extends StatelessWidget {
                     decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(30),
-                          topRight: Radius.circular(30)),
+                          topLeft: Radius.circular(50),
+                          topRight: Radius.circular(50)),
                     ),
                     child: Row(
                       children: [
