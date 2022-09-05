@@ -36,19 +36,12 @@ class FoodCard extends StatelessWidget {
           height: double.infinity,
           width: double.infinity,
           decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color(0xffdbf8ed),
-                  Color(0xffe1fff4),
-                ],
-              ),
+          border: Border.all(color: const Color(0x323cb589),width: 1),
               borderRadius: BorderRadius.circular(15),
-              color: const Color(0xff49D0B0)),
+              color: const Color(0x2893ece5)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
