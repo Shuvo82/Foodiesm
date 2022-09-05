@@ -55,7 +55,7 @@ class FoodCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 0.0, left: 8),
+                    padding: const EdgeInsets.only(top: 0.0, left: 14),
                     child: Text(
                       "${food_map!["name"]}",
                       style: const TextStyle(
