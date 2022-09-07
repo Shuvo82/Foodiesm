@@ -5,18 +5,18 @@ import 'package:foodiesm/widgets/food_type.dart';
 import 'food_type.dart';
 
 class FoodCard extends StatelessWidget {
-  final String name;
-  final String num;
-  final String types;
-  final String image;
+  // final String name;
+  // final String num;
+  // final String types;
+  // final String image;f
   final Map? food_map;
 
   const FoodCard({
     Key? key,
-    required this.name,
-    required this.num,
-    required this.types,
-    required this.image,
+    // required this.name,
+    // required this.num,
+    // required this.types,
+    // required this.image,
     required this.food_map,
   }) : super(key: key);
 
@@ -69,7 +69,7 @@ class FoodCard extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          "V${food_map!["vitamin"][0]}",
+                          "V${food_map!["vitamins"][0]}",
                           style: const TextStyle(
                               color: Colors.white,
                               fontSize: 17,

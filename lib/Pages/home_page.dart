@@ -1,24 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
-
 import '../data_source/fruit_data.dart';
 import '../widgets/food_card.dart';
-
-import 'on_boarding_page.dart';
 import 'setting.dart';
 import 'about.dart';
-import 'splash_screen.dart';
 
-// void main() => runApp(MaterialApp(
-//     builder: (context, child) {
-//       return Directionality(textDirection: TextDirection.ltr, child: child!);
-//     },
-//     title: 'GNav',
-//     theme: ThemeData(
-//       primaryColor: Colors.grey[800],
-//     ),
-//     home: Example()));
 
 class HomePage extends StatefulWidget {
   @override
@@ -27,6 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool isDarkModeEnabled = false;
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
@@ -36,7 +24,7 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-           Expanded(
+           const Expanded(
             flex: 1,
             child: Padding(
               padding: EdgeInsets.only(left: 7),
@@ -66,10 +54,11 @@ class _HomePageState extends State<HomePage> {
                 itemCount: HomePage.FoodData!.length,
                 itemBuilder: (context, index) {
                   return FoodCard(
-                    name: "${HomePage.FoodData![index]!["name"]}",
-                    image: "${HomePage.FoodData![index]!["img"]}",
-                    num: "${HomePage.FoodData![index]!["id"]}",
-                    types: "${HomePage.FoodData![index]!["type"]}",
+                    // name: HomePage.FoodData![index]!["name"],
+                    // image: HomePage.FoodData![index]!["image"],
+                    // num: HomePage.FoodData![index]!["num"],
+                    // types: HomePage.FoodData![index]!["types"],
+
                     food_map: HomePage.FoodData![index],
                   );
                 },
@@ -118,15 +107,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            ListTile(
-              title: const Text('splash'),
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return SplashScreen();
-                }));
-              },
-            ),
+
             ListTile(
               title: const Text('Setting'),
               onTap: () {
@@ -136,15 +117,7 @@ class _HomePageState extends State<HomePage> {
                 }));
               },
             ),
-            ListTile(
-              title: const Text('Introduction'),
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return OnBoardingPage1();
-                }));
-              },
-            ),
+
             ListTile(
               title: const Text('About'),
               onTap: () {
@@ -163,7 +136,6 @@ class _HomePageState extends State<HomePage> {
           return IconButton(
             icon: const Icon(Icons.menu, color: Colors.black),
             onPressed: () {
-              print("clicked");
               Scaffold.of(context).openDrawer();
             },
           );
@@ -194,8 +166,8 @@ class _HomePageState extends State<HomePage> {
               gap: 8,
               activeColor: Colors.black,
               iconSize: 24,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              duration: Duration(milliseconds: 400),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              duration: const Duration(milliseconds: 400),
               tabBackgroundColor: Colors.grey[100]!,
               color: Colors.black,
               tabs: const [

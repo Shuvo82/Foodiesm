@@ -113,20 +113,13 @@ class DetailsPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               //mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                AboutInfoTextType(text: "Vitamin"),
-                                AboutInfoTextType(text: "iron"),
-                                AboutInfoTextType(text: "Calcium"),
-                                AboutInfoTextType(text: "Carbohydrate"),
-                                const SizedBox(
-                                  height: 1,
-                                ),
-                                const Text("Breeding",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold)),
-                                AboutInfoTextType(text: "spawn"),
-                                AboutInfoTextType(text: "Egg"),
-                                AboutInfoTextType(text: "spawn_time"),
+                                AboutInfoTextType(text: "Vitamin:"),
+                                AboutInfoTextType(text: "Calorie:"),
+                                AboutInfoTextType(text: "Test:"),
+                                AboutInfoTextType(text: "Calcium:"),
+                                AboutInfoTextType(text: "Iron:"),
+                                AboutInfoTextType(text: "Magnesium:"),
+                                AboutInfoTextType(text: "About:"),
                               ],
                             ),
                           ),
@@ -140,28 +133,14 @@ class DetailsPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               //mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                AboutInfoTextValue(
-                                    text: "${data!['candy_count']}"),
-                                AboutInfoTextValue(text: "${data!['height']}"),
-                                AboutInfoTextValue(text: "${data!['weight']}"),
-                                AboutInfoTextValue(text: "${data!['type']}"),
-                                const SizedBox(
-                                  height: 1,
-                                ),
+                                AboutInfoTextValue(text: "${data!['vitamins']}"),
+                                AboutInfoTextValue(text: "${data!['calorie']}"),
+                                AboutInfoTextValue(text: "${data!['test']}"),
+                                AboutInfoTextValue(text: "${data!['calcium']}"),
+                                AboutInfoTextValue(text: "${data!['iron']}"),
+                                AboutInfoTextValue(text: "${data!['magnesium']}"),
+                                AboutInfoTextValue(text: "${data!['about']}"),
 
-
-                                const SizedBox(
-                                  height: 1,
-                                ),
-                                const Text("",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold)),
-                                AboutInfoTextValue(
-                                    text: "${data!['spawn_chance']}"),
-                                AboutInfoTextValue(text: "${data!["egg"]}"),
-                                AboutInfoTextValue(
-                                    text: "${data!['spawn_time']}"),
                               ],
                             ),
                           ),

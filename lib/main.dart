@@ -1,35 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:foodiesm/Pages/home_page.dart';
 
 import 'package:foodiesm/Pages/splash_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 
 
 void main() {
-  runApp( MyApp());
+   runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  bool isDarkModeEnabled = false;
+
+
+
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark().copyWith(
+        appBarTheme: const AppBarTheme(color:  Color(0xFF253341)),
+        scaffoldBackgroundColor: const Color(0xFF15202B),
+      ),
+      themeMode: isDarkModeEnabled ? ThemeMode.dark : ThemeMode.light,
       title: 'Foodiesm',
 
       debugShowCheckedModeBanner: false,
-      home:
-      SplashScreen(),
-
-
-    //   AnimatedSplashScreen(
-    //       duration: 3000,
-    //       splash: Image.asset('assets/images/splash.png',
-    //         fit: BoxFit.cover,
-    //       ),
-    //       nextScreen: HomePage(),
-    //       splashTransition: SplashTransition.fadeTransition,
-    //       //pageTransitionType: PageTransitionType.scale,
-    //
-    // )
+      home: SplashScreen(),
     );
   }
+
+
 }

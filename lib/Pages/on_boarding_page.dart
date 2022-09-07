@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'home_page.dart';
 
@@ -20,20 +20,20 @@ class OnBoardingPage1 extends StatelessWidget {
 
 class MyHome extends StatelessWidget {
   final Color kDarkBlueColor = const Color(0xFF3D0549);
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
 
   @override
   Widget build(BuildContext context) {
     return OnBoardingSlider(
       finishButtonText: 'Lets go',
       onFinish: () {
+        ttt();
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) => HomePage(),
           ),
         );
-
-
       },
       finishButtonColor: kDarkBlueColor,
       skipTextButton: Text(
@@ -179,5 +179,13 @@ class MyHome extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  Future<void> ttt() async {
+
+    final SharedPreferences prefs = await _prefs;
+    print("seen value is="+prefs.getBool('seen').toString());
+    prefs.setBool('seen',true);
+    print("seen value set to="+prefs.getBool('seen').toString());
   }
 }

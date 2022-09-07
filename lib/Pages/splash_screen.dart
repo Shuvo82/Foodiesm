@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodiesm/Pages/on_boarding_page.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 import 'home_page.dart';
@@ -14,6 +15,10 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+
+
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   initState() {
     super.initState();
     _navigateToHome();
@@ -21,8 +26,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _navigateToHome() async {
     await Future.delayed(const Duration(milliseconds: 1500 ), () {});
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => OnBoardingPage1()));
+    page_selector();
+    // Navigator.pushReplacement(
+    //     context, MaterialPageRoute(builder: (context) => getWidget()));
   }
 
   @override
@@ -65,4 +71,17 @@ class _SplashScreenState extends State<SplashScreen> {
       );
 
   }
+  page_selector() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool seen = (prefs.getBool('seen') ?? false);
+    if (seen) {
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) =>  HomePage()));
+    } else {
+      await prefs.setBool('seen', true);
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) =>  OnBoardingPage1()));
+    }
+  }
+
 }
