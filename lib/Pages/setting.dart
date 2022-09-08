@@ -82,11 +82,11 @@ class _SettingsState extends State<Settings> {
       if (isDarkModeEnabled == true) {
         prefs.setBool('isDarkModeEnabled', false);
         isDarkModeEnabled = false;
-        print("Dark Mode is Disabled");
+        //print("Dark Mode is Disabled");
       } else {
         prefs.setBool('isDarkModeEnabled', true);
         isDarkModeEnabled = true;
-        print("Dark Mode is Enabled");
+        //print("Dark Mode is Enabled");
       }
     });
   }

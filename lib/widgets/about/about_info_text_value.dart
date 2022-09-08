@@ -9,14 +9,17 @@ class AboutInfoTextValue extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Text("$text",
-        style: TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w600,
-          color: Color(0xff000000),
-        ),),
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(text,
+          style: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w600,
+            color: Color(0xff000000),
+          ),),
+      ),
     );
   }
 }

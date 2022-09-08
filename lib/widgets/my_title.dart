@@ -36,7 +36,7 @@ class MyTitle extends StatelessWidget {
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   FoodType(text: "fire"),
                   FoodType(text: "Water"),
                 ],
@@ -45,7 +45,7 @@ class MyTitle extends StatelessWidget {
           ),
           Text(
             "$num",
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
             ),
           ),

@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
   static final List<Widget> _widgetOptions = <Widget>[
     Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 25),
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
     ),
 
     Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 25),
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
     ),
-    Text(
+    const Text(
       'Favourites',
       style: optionStyle,
     ),

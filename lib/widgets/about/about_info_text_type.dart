@@ -12,7 +12,7 @@ class AboutInfoTextType extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Text("$text",
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 18,
           //fontWeight: FontWeight.w100,
           color: Color(0xff979A9D),
