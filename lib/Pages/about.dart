@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(About());
 
@@ -92,12 +93,18 @@ class About extends StatelessWidget {
                               width: 90,
                             ),
                             tooltip: 'Closes application',
-                            onPressed: () => () {},
+                            onPressed: () => Uri(
+                                scheme: 'https',
+                                host: 'www.facebook.com',
+                                path: 'facebook.com'),
+
+                            //Uri.parse('https://www.facebook.com/sohorafuzzaman.shuvo'),
+
                           ),
                           IconButton(
                             icon: Image.asset('assets/icons/Instagram.png'),
                             tooltip: 'Closes application',
-                            onPressed: () => () {},
+                            onPressed: () => Uri.parse('https://www.instagram.com/__sohoraf__/'),
                           ),
                         ],
                       )
