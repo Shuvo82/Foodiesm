@@ -1,5 +1,5 @@
-class FoodDataSource {
-  static List<Map?> foods = [
+class FruitDataSource {
+  static List<Map?> fruits = [
     {
       "id": "1",
       "name": "Apple",
@@ -32,7 +32,7 @@ class FoodDataSource {
           "An avocado is a bright green fruit with a large pit and dark leathery skin.  Avocados are a favorite of the produce section. They're the go-to ingredient for guacamole dips",
     },
     {
-      "id": "4",
+      "id": "3",
       "name": "Guava",
       "img":
           "https://lh5.googleusercontent.com/sDvSEtqec0rqiC207HcKYt4YGjuKtzQADQEI_qmV087sjAGM7u-EwioaLVAqEuGkrAA=w2400",

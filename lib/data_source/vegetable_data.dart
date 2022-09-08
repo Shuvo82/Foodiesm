@@ -1,18 +1,22 @@
-class FoodDataSource {
-  static List<Map?>foods = [
+class VegetableDataSource {
+  static List<Map?> vegetables = [
     {
       "id": "1",
-      "name": "Apple",
-      "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
-      "type": ["Fruit", "Vegetable"],
+      "name": "Carrot",
+      "img": "https://lh6.googleusercontent.com/zkDMyAFpZQGXQwxjvK_xoqMiCsTxyTWftuQAEoTI0L5KK9jKCaQQTNz1yOYzUzz02XA=w2400",
+      "type": ["Vegetable"],
+
       //this information is for per 100 gram of this fruit
-      "vitamin": ["C", "D", "E"],
-      "calories": "52",
-      "tests": "Sweet",
+      "vitamins": ["C", "B6", "d"],
+      "calorie": "52",
+      "test": "Sweet",
       "calcium": "0%",
-      "details": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
-
-
+      "iron": "0%",
+      "magnesium": "0%",
+      "about":
+      "Carrot is a vegetables",
     },
+
+
   ];
 }

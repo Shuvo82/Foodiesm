@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 import '../data_source/fruit_data.dart';
+import '../data_source/vegetable_data.dart';
 import '../widgets/food_card.dart';
 import 'setting.dart';
 import 'about.dart';
@@ -9,7 +10,8 @@ import 'about.dart';
 
 class HomePage extends StatefulWidget {
   @override
-  static List<Map?>? FoodData = FoodDataSource.foods;
+  static List<Map?>? FruitData = FruitDataSource.fruits;
+  static List<Map?>? VegetableData = VegetableDataSource.vegetables;
   _HomePageState createState() => _HomePageState();
 }
 
@@ -29,10 +31,10 @@ class _HomePageState extends State<HomePage> {
             child: Padding(
               padding: EdgeInsets.only(left: 7),
               child: Text(
-                "Foodiesm",
+                "Fruits",
                 style: TextStyle(
                   fontSize: 30,
-                  fontWeight: FontWeight.bold,
+
                 ),
               ),
             ),
@@ -51,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                   mainAxisSpacing: 15,
                   crossAxisSpacing: 15,
                 ),
-                itemCount: HomePage.FoodData!.length,
+                itemCount: HomePage.FruitData!.length,
                 itemBuilder: (context, index) {
                   return FoodCard(
                     // name: HomePage.FoodData![index]!["name"],
@@ -59,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                     // num: HomePage.FoodData![index]!["num"],
                     // types: HomePage.FoodData![index]!["types"],
 
-                    food_map: HomePage.FoodData![index],
+                    food_map: HomePage.FruitData![index],
                   );
                 },
               ),
@@ -69,9 +71,54 @@ class _HomePageState extends State<HomePage> {
       ),
     ),
 
-    Text(
-      'Vegetables',
-      style: optionStyle,
+    Padding(
+      padding:  EdgeInsets.symmetric(horizontal: 25),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Expanded(
+            flex: 1,
+            child: Padding(
+              padding: EdgeInsets.only(left: 7),
+              child: Text(
+                "vegetables",
+                style: TextStyle(
+                  fontSize: 30,
+
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Expanded(
+            flex: 18,
+            child: SizedBox(
+              height: 650,
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 1,
+                  mainAxisSpacing: 15,
+                  crossAxisSpacing: 15,
+                ),
+                itemCount: HomePage.VegetableData!.length,
+                itemBuilder: (context, index) {
+                  return FoodCard(
+                    // name: HomePage.FoodData![index]!["name"],
+                    // image: HomePage.FoodData![index]!["image"],
+                    // num: HomePage.FoodData![index]!["num"],
+                    // types: HomePage.FoodData![index]!["types"],
+
+                    food_map: HomePage.VegetableData![index],
+                  );
+                },
+              ),
+            ),
+          ),
+        ],
+      ),
     ),
     Text(
       'Favourites',
@@ -140,6 +187,19 @@ class _HomePageState extends State<HomePage> {
             },
           );
         }),
+        title:  const Center(
+          child: Text(
+            "Foodiesm",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+        ),
+        actions: const [
+          Text("   "),
+        ],
         backgroundColor: Colors.transparent,
         elevation: 0,
 
