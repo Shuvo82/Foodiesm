@@ -319,22 +319,22 @@ class FruitDataSource {
       "about":
       "Watermelon is a sweet and refreshing low calorie summer snack. It provides hydration and also essential nutrients, including vitamins, minerals",
     },
-    {
-      "id": "",
-      "name": "",
-      "img":
-      "",
-      "type": ["Fruit", "Vegetable"],
-      //this information is for per 100 gram of this fruit
-      "vitamins": ["C", "D", "B6"],
-      "calorie": "89",
-      "test": "Sweet",
-      "calcium": "0%",
-      "iron": "0%",
-      "magnesium": "0%",
-      "about":
-      "",
-    },
+    // {
+    //   "id": "",
+    //   "name": "",
+    //   "img":
+    //   "",
+    //   "type": ["Fruit", "Vegetable"],
+    //   //this information is for per 100 gram of this fruit
+    //   "vitamins": ["C", "B6"],
+    //   "calorie": "89",
+    //   "test": "Sweet",
+    //   "calcium": "1%",
+    //   "iron": "1%",
+    //   "magnesium": "0%",
+    //   "about":
+    //   "",
+    // },
 
   ];
 }
