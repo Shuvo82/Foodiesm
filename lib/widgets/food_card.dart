@@ -90,8 +90,8 @@ class FoodCard extends StatelessWidget {
         ),
         Positioned(
           right: -0,
-          height: 90,
-          width: 90,
+          height: 100,
+          width: 100,
           bottom: -2,
           child: Hero(
             tag: "${food_map!["name"]}",

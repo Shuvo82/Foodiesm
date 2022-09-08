@@ -34,10 +34,10 @@ class FruitDataSource {
       "id": "3",
       "name": "Banana",
       "img":
-          " https://lh5.googleusercontent.com/j1OjLhTY90k4b8lcy5siRPqkPem2L1rUbNXiMNdgYoBYW20s9Flo0MRCwaDr46kzBi0=w2400",
+          "https://lh5.googleusercontent.com/j1OjLhTY90k4b8lcy5siRPqkPem2L1rUbNXiMNdgYoBYW20s9Flo0MRCwaDr46kzBi0=w2400",
       "type": ["Fruit", "Vegetable"],
       //this information is for per 100 gram of this fruit
-      "vitamins": ["C", "D", "B6"],
+      "vitamins": [ "D", "B6","C"],
       "calorie": "89",
       "test": "Sweet",
       "calcium": "0%",
@@ -59,7 +59,7 @@ class FruitDataSource {
       "iron": "1%",
       "magnesium": "2%",
       "about":
-      "A cherry is a fruit that grows on a tree or a bush. It belongs to the genus Prunus. It is red in color, with a seed in the middle. It tastes slightly sour, and is often used to flavour cakes and ice cream, or is baked in a pie or cobbler.",
+      "A cherry is a fruit that grows on a tree or a bush It is red in color, with a seed in the middle. It tastes slightly sour.",
     },
 
     // {
