@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodiesm/Pages/home_page.dart';
-
 import 'package:foodiesm/Pages/splash_screen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-
-
 
 void main() {
    runApp( MyApp());
@@ -13,10 +7,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   bool isDarkModeEnabled = false;
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(

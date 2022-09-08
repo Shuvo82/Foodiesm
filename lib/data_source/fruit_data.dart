@@ -33,7 +33,7 @@ class FruitDataSource {
     },
     {
       "id": "3",
-      "name": "Bananas",
+      "name": "Banana",
       "img":
       "https://lh5.googleusercontent.com/j1OjLhTY90k4b8lcy5siRPqkPem2L1rUbNXiMNdgYoBYW20s9Flo0MRCwaDr46kzBi0=w2400",
       "type": ["Fruit"],
@@ -65,7 +65,7 @@ class FruitDataSource {
     },
     {
       "id": "5",
-      "name": "Cherries",
+      "name": "Cherri",
       "img":
       "https://lh3.googleusercontent.com/k7O-8PNqtU3kpoaaLwAiU3QEWRZe7KLllwr0770WWgwXScPbCHyxnuoBrVPE1VUdfP4=w2400",
       "type": ["Fruit"],
@@ -129,7 +129,7 @@ class FruitDataSource {
     },
     {
       "id": "9",
-      "name": "Grapes",
+      "name": "Grape",
       "img":
       "https://lh4.googleusercontent.com/8xf3SLDTcr745weQmGgZeGadrK8IqGg_zVLfClzb8-lVc_gSl3L2EeQb4WSdS9r3VFc=w2400",
       "type": ["Fruit"],
@@ -161,7 +161,7 @@ class FruitDataSource {
     },
     {
       "id": "11",
-      "name": "Lemons",
+      "name": "Lemon",
       "img":
       "https://lh4.googleusercontent.com/UaY_PZ4BFZ_HXjFgIOL3bWjCKPXU9YnM4cTU0iVsi51UgCAh2hE628NfKwtCngH0Dgc=w2400",
       "type": ["Fruit"],
@@ -177,7 +177,7 @@ class FruitDataSource {
     },
     {
       "id": "12",
-      "name": "Mangoes",
+      "name": "Mango",
       "img":
       "https://lh6.googleusercontent.com/M05OIQQd4wr8hEodnfMwAtogcnANsgqYofXdrQRNG0eKYJFw6V7oIvjDHPcEQesqQmA=w2400",
       "type": ["Fruit"],
@@ -193,7 +193,7 @@ class FruitDataSource {
     },
     {
       "id": "13",
-      "name": "Oranges",
+      "name": "Orange",
       "img":
       "https://lh6.googleusercontent.com/q21M78ErPyAqW1KSqof4boT_x3NoahutwlbkKkMTnZx-gUemGJu14obSFqFZVz99YjY=w2400",
       "type": ["Fruit"],
@@ -225,7 +225,7 @@ class FruitDataSource {
     },
     {
       "id": "15",
-      "name": "Pears",
+      "name": "Pear",
       "img":
       "https://lh3.googleusercontent.com/GFUdoVhHKfa4yh8SWFc8SkMTbHck63Og945x_nSLbCIBExyYyC3Sefy4y1hRjw6MNws=w2400",
       "type": ["Fruit"],
@@ -257,7 +257,7 @@ class FruitDataSource {
     },
     {
       "id": "17",
-      "name": "Peaches",
+      "name": "Peach",
       "img":"https://lh4.googleusercontent.com/pzbey2gXll5cenQpTTOcOG4Sfcr80W9pvQh92AMmVDRMOemRvI5I5lUOzQ1eI7Tgvn0=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
@@ -273,12 +273,12 @@ class FruitDataSource {
 
     {
       "id": "18",
-      "name": "Raspberries",
+      "name": "Raspberri",
       "img":
       "https://lh3.googleusercontent.com/9EcTnuCIhWMu8yWB3pXN59jxNVocVSSH_93Hie7MM2pYJlknwu7Dl4wVHmg6PA3CajQ=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
-      "vitamins": ["C", "B6"],
+      "vitamins": ["B6", "C"],
       "calorie": "53",
       "test": "Sour",
       "calcium": "2%",
@@ -289,7 +289,7 @@ class FruitDataSource {
     },
     {
       "id": "19",
-      "name": "Strawberries",
+      "name": "Strawberri",
       "img":
       "https://lh6.googleusercontent.com/RWlT2bs8WCYiLGZN5CrTiorbYJGi4U_dyUz_d8zGGgjo3lNFlPvcogmV9VGWtL4FdEI=w2400",
       "type": ["Fruit"],
@@ -319,22 +319,7 @@ class FruitDataSource {
       "about":
       "Watermelon is a sweet and refreshing low calorie summer snack. It provides hydration and also essential nutrients, including vitamins, minerals",
     },
-    // {
-    //   "id": "",
-    //   "name": "",
-    //   "img":
-    //   "",
-    //   "type": ["Fruit", "Vegetable"],
-    //   //this information is for per 100 gram of this fruit
-    //   "vitamins": ["C", "B6"],
-    //   "calorie": "89",
-    //   "test": "Sweet",
-    //   "calcium": "1%",
-    //   "iron": "1%",
-    //   "magnesium": "0%",
-    //   "about":
-    //   "",
-    // },
+
 
   ];
 }
