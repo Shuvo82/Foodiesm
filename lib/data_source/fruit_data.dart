@@ -13,7 +13,7 @@ class FruitDataSource {
       "iron": "0%",
       "magnesium": "0%",
       "about":
-          "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
+      "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus",
     },
     {
       "id": "2",
@@ -51,7 +51,7 @@ class FruitDataSource {
       "id": "4",
       "name": "Blueberry",
       "img":
-      "https://lh3.googleusercontent.com/qaWFLRMKZpGQzIhDy46kmwnP2Qi8GJfnA9-UP52f9LMZzNYOB5kuJUIpy3AImwbOUoY=w2400",
+      "https://lh5.googleusercontent.com/fG4MuB56h2ptfGDc88KPAtorPLJOt2aSuaja4NrpGHkFC0VfJ-NScyPFDWx6W-JftYs=w2400",
       "type": ["Fruit", "Vegetable"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C", "E", "B6","K"],
@@ -83,7 +83,7 @@ class FruitDataSource {
       "id": "6",
       "name": "Coconut",
       "img":
-      "https://lh3.googleusercontent.com/sCTuEMH46Z0JQ4hMETIwJkYjDgs9F_DtlY2ZrayP2602PUejEoXOo3G7XJsmI7qyolU=w2400",
+      "https://lh6.googleusercontent.com/I-D6S63fmkSyXDscVRsWvZGDqO21A4-nbL-yI_pL1s9YKML7EbVWRwU4QzQHlpfbnXA=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C", "B6"],
@@ -99,7 +99,7 @@ class FruitDataSource {
       "id": "7",
       "name": "Dragon",
       "img":
-      "https://lh4.googleusercontent.com/vngcSd3t4ul6YguGrn1_yzCBdxhfwAWblX1ULvEU_mdTOMXd3WKBQ4swspRAX2fTuKk=w2400",
+      "https://lh4.googleusercontent.com/U91j3OuSZ-tibD153220HK9hYSx29z9VHmoRKwjZxtyBb02VeyWlyFFQ8gJT_SiJHQk=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C"],
@@ -147,7 +147,7 @@ class FruitDataSource {
       "id": "10",
       "name": "Kiwi",
       "img":
-      "https://lh6.googleusercontent.com/X_v489yz1cGUhhazIbtYZ1LssLA7Y17rsA7fURtDNVYj3Bx0rh-O4ngTH6iwW9T8UU4=w2400",
+      "https://lh3.googleusercontent.com/8DjrMzFL--6fSI6tk4_pXmi0w3JrjDXCiCxlZby_9NL8gI82yFhQvikhrCiWNTkOcWc=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C", "B6"],
@@ -179,7 +179,7 @@ class FruitDataSource {
       "id": "12",
       "name": "Mango",
       "img":
-      "https://lh6.googleusercontent.com/M05OIQQd4wr8hEodnfMwAtogcnANsgqYofXdrQRNG0eKYJFw6V7oIvjDHPcEQesqQmA=w2400",
+      "https://lh6.googleusercontent.com/EJMgA3rF9V-b6lwWEQ8LO8n8b90ExSWL07QYHBB2dXmWjO4UtI42VEQAmqUovk-8yBI=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C","B6"],
@@ -195,7 +195,7 @@ class FruitDataSource {
       "id": "13",
       "name": "Orange",
       "img":
-      "https://lh6.googleusercontent.com/q21M78ErPyAqW1KSqof4boT_x3NoahutwlbkKkMTnZx-gUemGJu14obSFqFZVz99YjY=w2400",
+      "https://lh4.googleusercontent.com/hwF5n8NcIo0bt1mI-v1liozni93OTGfXdsoe6QQ4APZ8WjXkV9t4D-v2XQcDKiJR4Ak=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C", "B6"],
@@ -211,7 +211,7 @@ class FruitDataSource {
       "id": "14",
       "name": "Papaya",
       "img":
-      "https://lh4.googleusercontent.com/ydAOoi4v55jUv7leLjjaEW14P6y_Y1t-g-wzsQeB-CRfzUokRxcG3SSBBwIT5gqEnPQ=w2400",
+      "https://lh5.googleusercontent.com/YRgSYVz5P2SNKh692uhULg_wgmTgi8qvlk1w2Y3yAuKp8o6dml6SLi2z-zC70JnU5yw=w2400",
       "type": ["Fruit", "Vegetable"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C", "A"],
@@ -243,7 +243,7 @@ class FruitDataSource {
       "id": "16",
       "name": "Pineapple",
       "img":
-      "https://lh3.googleusercontent.com/yjqfFAY1PlnCXDFm7-ZgtrG-XJYRuKEKlTyZcZ6HpFlmeiDolzd29q40YZttEH1XBRs=w2400",
+      "https://lh5.googleusercontent.com/lhbsFBJh6Gc-BhocFC2ESscppPUp38RQ0zH6z6qc3W7CTi0Y9B3jzpzWWvUlzCuTuNM=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C", "D", "B6"],
@@ -257,6 +257,8 @@ class FruitDataSource {
     },
     {
       "id": "17",
+      "name": "Peaches",
+      "img":"https://lh3.googleusercontent.com/HzocDNKq01lucQL0X5Std6IJb8f1htnlDMKlcBNiaFPTV52uvzPV4bxcuIcEoO8TWks=w2400",
       "name": "Peach",
       "img":"https://lh4.googleusercontent.com/pzbey2gXll5cenQpTTOcOG4Sfcr80W9pvQh92AMmVDRMOemRvI5I5lUOzQ1eI7Tgvn0=w2400",
       "type": ["Fruit"],
@@ -268,14 +270,14 @@ class FruitDataSource {
       "iron": "2%",
       "magnesium": "3%",
       "about":
-          "Peaches are a summertime favorite throughout the nation. The fuzzy fruit is a great source of vitamin C, A, low in calories",
+      "Peaches are a summertime favorite throughout the nation. The fuzzy fruit is a great source of vitamin C, A, low in calories",
     },
 
     {
       "id": "18",
       "name": "Raspberri",
       "img":
-      "https://lh3.googleusercontent.com/9EcTnuCIhWMu8yWB3pXN59jxNVocVSSH_93Hie7MM2pYJlknwu7Dl4wVHmg6PA3CajQ=w2400",
+      "https://drive.google.com/file/d/19KH2RD4IyBBpW8qMv2m37yiYy-w_6U0U/view?usp=sharing",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["B6", "C"],
@@ -291,7 +293,7 @@ class FruitDataSource {
       "id": "19",
       "name": "Strawberri",
       "img":
-      "https://lh6.googleusercontent.com/RWlT2bs8WCYiLGZN5CrTiorbYJGi4U_dyUz_d8zGGgjo3lNFlPvcogmV9VGWtL4FdEI=w2400",
+      "https://lh6.googleusercontent.com/2ELgRryc92v0_4SlF3tz3Z8CLzyVLAlOFakBcDh40oEmFnlmg40oXI3GK6AwLitgztU=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C", "E", "K"],
@@ -307,7 +309,7 @@ class FruitDataSource {
       "id": "20",
       "name": "Watermelon",
       "img":
-      "https://lh6.googleusercontent.com/gi6kvj5pVlkEyE2TOWfMaUG7PNMqqnU34tVuTHsKWmj2kga4tXOYRObbtImVQ-qsJo0=w2400",
+      "https://lh5.googleusercontent.com/JIMr2oAmhaCyR1XMwP7DQeecqIhSXxvpufvlLcb-z-Tz2HScDJlcF_D9v-3ue2t_oy0=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C"],
