@@ -257,10 +257,8 @@ class FruitDataSource {
     },
     {
       "id": "17",
-      "name": "Peaches",
       "img":"https://lh3.googleusercontent.com/HzocDNKq01lucQL0X5Std6IJb8f1htnlDMKlcBNiaFPTV52uvzPV4bxcuIcEoO8TWks=w2400",
       "name": "Peach",
-      "img":"https://lh4.googleusercontent.com/pzbey2gXll5cenQpTTOcOG4Sfcr80W9pvQh92AMmVDRMOemRvI5I5lUOzQ1eI7Tgvn0=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C", "B6", "E", "K"],
@@ -277,7 +275,7 @@ class FruitDataSource {
       "id": "18",
       "name": "Raspberri",
       "img":
-      "https://drive.google.com/file/d/19KH2RD4IyBBpW8qMv2m37yiYy-w_6U0U/view?usp=sharing",
+      "https://lh3.googleusercontent.com/TKEsq5BcapKr7C64TlL68eWXfKJ4TOl8-jggipS5k8ilYo8Jo_G7DrhbYVLNDnZqiYs=w2400",
       "type": ["Fruit"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["B6", "C"],
