@@ -9,7 +9,7 @@ class VegetableDataSource {
       //this information is for per 100 gram of this fruit
       "vitamins": ["C","B6"],
       "calorie": "20",
-      "test": "",
+      "test": "Woody",
       "calcium": "2%",
       "iron": "11%",
       "magnesium": "3%",
@@ -41,7 +41,7 @@ class VegetableDataSource {
       //this information is for per 100 gram of this fruit
       "vitamins": ["C","E","K"],
       "calorie": "34",
-      "test": "",
+      "test": "Muddy",
       "calcium": "5%",
       "iron": "6%",
       "magnesium": "6%",
@@ -186,7 +186,7 @@ class VegetableDataSource {
       "id": "12",
       "name": "Okra",
       "img":
-      "https://lh3.googleusercontent.com/UDSO8p-HlrfTtBUEI8v5Kg-FM_KL1YSHwRJobjP8HYX33KgW-RuqoWKpIdRCX2zDz3E=w2400",
+      "https://lh4.googleusercontent.com/YR_5h0eufQlh2qRW0At3WvYZzLCA8_NHiDFdVp0koSEX_AtoYrmLlttuyS8ZYI58r-4=w2400",
       "type": ["Vegetable"],
       //this information is for per 100 gram of this fruit
       "vitamins": ["C","B6"],
