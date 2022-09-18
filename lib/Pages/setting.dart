@@ -9,10 +9,6 @@ void main() {
   runApp(Settings());
 }
 
-
-
-
-
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
 
@@ -22,7 +18,13 @@ class Settings extends StatefulWidget {
 
 class _SettingsState extends State<Settings> {
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  void initState() {
+    super.initState();
+    dark_mode_selector();
+  }
   bool isDarkModeEnabled = false;
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -68,6 +70,23 @@ class _SettingsState extends State<Settings> {
                   leading: const Icon(Icons.format_paint),
                   title: const Text('Dark mode'),
                 ),
+                SettingsTile.switchTile(
+                  onToggle: (value) {
+                    Fluttertoast.showToast(
+                        msg: isDarkModeEnabled
+                            ? "Dark mode is enabled"
+                            : "Dark mode is disabled",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.BOTTOM,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 16.0);
+                  },
+                  initialValue: false,
+                  leading: const Icon(Icons.notifications),
+                  title: const Text('Notifications'),
+                ),
               ],
             ),
           ],
@@ -75,6 +94,7 @@ class _SettingsState extends State<Settings> {
       ),
     );
   }
+
   Future<void> DarkMode() async {
     final SharedPreferences prefs = await _prefs;
 
@@ -90,9 +110,19 @@ class _SettingsState extends State<Settings> {
       }
     });
   }
-  //  getBool() async {
-  //   final SharedPreferences prefs = await _prefs;
-  //   var value = await prefs.getBool('') ?? false;
-  //   return value;
-  // }
+
+  dark_mode_selector() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool dark_mode = (prefs.getBool('isDarkModeEnabled') ?? false);
+    print(dark_mode);
+    if (dark_mode) {
+      setState(() {
+        isDarkModeEnabled = true;
+      });
+    } else {
+      setState(() {
+        isDarkModeEnabled = false;
+      });
+    }
+  }
 }

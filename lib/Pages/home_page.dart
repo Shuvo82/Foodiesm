@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../data_source/fruit_data.dart';
 import '../data_source/vegetable_data.dart';
 import '../widgets/food_card.dart';
@@ -16,7 +17,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
+  void initState() {
+    super.initState();
+    dark_mode_selector();
+  }
   bool isDarkModeEnabled = false;
+
+
+
+
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
@@ -129,131 +140,154 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
-                ),
-                color: Colors.blue,
-                image: DecorationImage(
-                  image: AssetImage("assets/images/img.png"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Text(
-                'Foodiesm',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                ),
-              ),
-            ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark().copyWith(
+        appBarTheme: const AppBarTheme(color:  Color(0xFF253341)),
+        scaffoldBackgroundColor: const Color(0xFF15202B),
 
-            ListTile(
-              title: const Text('Setting'),
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return Settings();
-                }));
-              },
-            ),
-
-            ListTile(
-              title: const Text('About'),
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) {
-                  return About();
-                }));
-              },
-            ),
-          ],
-        ),
       ),
-      appBar: AppBar(
-        automaticallyImplyLeading: true,
-        leading: Builder(builder: (context) {
-          return IconButton(
-            icon: const Icon(Icons.menu, color: Colors.black),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-          );
-        }),
-        title:  const Center(
-          child: Text(
-            "Foodiesm",
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
+      themeMode: isDarkModeEnabled ? ThemeMode.dark : ThemeMode.light,
+      home: Scaffold(
+        //backgroundColor: Colors.white,
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
+                  color: Colors.blue,
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/img.png"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Text(
+                  'Foodiesm',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                  ),
+                ),
+              ),
+
+              ListTile(
+                title: const Text('Setting'),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {return Settings();}));
+                },
+              ),
+
+              ListTile(
+                title: const Text('About'),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) {
+                    return About();
+                  }));
+                },
+              ),
+            ],
           ),
         ),
-        actions: const [
-          Text("   "),
-        ],
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-
-      ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 20,
-              color: Colors.black.withOpacity(.1),
-            )
-          ],
-        ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
-            child: GNav(
-              rippleColor: Colors.grey[300]!,
-              hoverColor: Colors.grey[100]!,
-              gap: 8,
-              activeColor: Colors.black,
-              iconSize: 24,
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              duration: const Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.grey[100]!,
-              color: Colors.black,
-              tabs: const [
-                GButton(
-                  icon: LineIcons.fruitApple,
-                  text: 'Fruits',
-                ),
-                GButton(
-                  icon: Icons.kebab_dining,
-                  text: 'Vegetables',
-                ),
-                GButton(
-                  icon: LineIcons.heart,
-                  text: 'Favourite',
-                ),
-              ],
-              selectedIndex: _selectedIndex,
-              onTabChange: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                });
+        appBar: AppBar(
+          automaticallyImplyLeading: true,
+          leading: Builder(builder: (context) {
+            return IconButton(
+              icon: const Icon(Icons.menu, color: Colors.black),
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
               },
+            );
+          }),
+          title:  const Center(
+            child: Text(
+              "Foodiesm",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+          ),
+          actions: const [
+            Text("   "),
+          ],
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+
+        ),
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 20,
+                color: Colors.black.withOpacity(.1),
+              )
+            ],
+          ),
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+              child: GNav(
+                rippleColor: Colors.grey[300]!,
+                hoverColor: Colors.grey[100]!,
+                gap: 8,
+                activeColor: Colors.black,
+                iconSize: 24,
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                duration: const Duration(milliseconds: 400),
+                tabBackgroundColor: Colors.grey[100]!,
+                color: Colors.black,
+                tabs: const [
+                  GButton(
+                    icon: LineIcons.fruitApple,
+                    text: 'Fruits',
+                  ),
+                  GButton(
+                    icon: Icons.kebab_dining,
+                    text: 'Vegetables',
+                  ),
+                  GButton(
+                    icon: LineIcons.heart,
+                    text: 'Favourite',
+                  ),
+                ],
+                selectedIndex: _selectedIndex,
+                onTabChange: (index) {
+                  setState(() {
+                    _selectedIndex = index;
+                  });
+                },
+              ),
             ),
           ),
         ),
       ),
     );
   }
+  dark_mode_selector() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool dark_mode = (prefs.getBool('isDarkModeEnabled') ?? false);
+    print(dark_mode);
+    if (dark_mode) {
+      setState(() {
+        isDarkModeEnabled = true;
+      });
+    } else {
+      setState(() {
+        isDarkModeEnabled = false;
+      });
+    }
+  }
+
 }

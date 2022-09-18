@@ -1,12 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void main() => runApp(About());
 
-class About extends StatelessWidget {
+class About extends StatefulWidget {
+  @override
+  State<About> createState() => _AboutState();
+}
+
+class _AboutState extends State<About> {
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
+  void initState() {
+    super.initState();
+    dark_mode_selector();
+  }
+
+  bool isDarkModeEnabled = false;
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark().copyWith(
+        appBarTheme: const AppBarTheme(color:  Color(0xFF253341)),
+        scaffoldBackgroundColor: const Color(0xFF15202B),
+
+      ),
+      themeMode: isDarkModeEnabled ? ThemeMode.dark : ThemeMode.light,
+
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
@@ -204,5 +229,20 @@ class About extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  dark_mode_selector() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool dark_mode = (prefs.getBool('isDarkModeEnabled') ?? false);
+    print(dark_mode);
+    if (dark_mode) {
+      setState(() {
+        isDarkModeEnabled = true;
+      });
+    } else {
+      setState(() {
+        isDarkModeEnabled = false;
+      });
+    }
   }
 }
