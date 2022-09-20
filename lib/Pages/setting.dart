@@ -21,8 +21,10 @@ class _SettingsState extends State<Settings> {
   void initState() {
     super.initState();
     dark_mode_selector();
+    single_mode_selector();
   }
   bool isDarkModeEnabled = false;
+  bool isSingleModeEnabled=false;
 
 
   @override
@@ -72,20 +74,11 @@ class _SettingsState extends State<Settings> {
                 ),
                 SettingsTile.switchTile(
                   onToggle: (value) {
-                    Fluttertoast.showToast(
-                        msg: isDarkModeEnabled
-                            ? "Dark mode is enabled"
-                            : "Dark mode is disabled",
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.BOTTOM,
-                        timeInSecForIosWeb: 1,
-                        backgroundColor: Colors.red,
-                        textColor: Colors.white,
-                        fontSize: 16.0);
+                    single_mode();
                   },
-                  initialValue: false,
-                  leading: const Icon(Icons.notifications),
-                  title: const Text('Notifications'),
+                  initialValue: isSingleModeEnabled,
+                  leading: const Icon(Icons.calendar_view_day),
+                  title: const Text('Single Column  mode'),
                 ),
               ],
             ),
@@ -111,6 +104,25 @@ class _SettingsState extends State<Settings> {
     });
   }
 
+
+
+
+  Future<void> single_mode() async {
+    final SharedPreferences prefs = await _prefs;
+
+    setState(() {
+      if (isSingleModeEnabled == true) {
+        prefs.setBool('single_mode', false);
+        isSingleModeEnabled = false;
+        //print("Dark Mode is Disabled");
+      } else {
+        prefs.setBool('single_mode', true);
+        isSingleModeEnabled = true;
+        //print("Dark Mode is Enabled");
+      }
+    });
+  }
+
   dark_mode_selector() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool dark_mode = (prefs.getBool('isDarkModeEnabled') ?? false);
@@ -122,6 +134,22 @@ class _SettingsState extends State<Settings> {
     } else {
       setState(() {
         isDarkModeEnabled = false;
+      });
+    }
+  }
+
+
+  single_mode_selector() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool single_mode = (prefs.getBool('single_mode') ?? false);
+    print(single_mode);
+    if (single_mode) {
+      setState(() {
+        isSingleModeEnabled = true;
+      });
+    } else {
+      setState(() {
+        isSingleModeEnabled = false;
       });
     }
   }

@@ -20,10 +20,15 @@ class _HomePageState extends State<HomePage> {
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
 
   void initState() {
+    //bool isSingleModeEnabled = false;
     super.initState();
+
     dark_mode_selector();
+    single_mode_selector();
   }
   bool isDarkModeEnabled = false;
+  static bool isSingleModeEnabled = false;
+
 
 
 
@@ -58,8 +63,8 @@ class _HomePageState extends State<HomePage> {
             child: SizedBox(
               height: 650,
               child: GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
+                gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: isSingleModeEnabled ? 1 : 2,
                   childAspectRatio: 1,
                   mainAxisSpacing: 15,
                   crossAxisSpacing: 15,
@@ -286,6 +291,21 @@ class _HomePageState extends State<HomePage> {
     } else {
       setState(() {
         isDarkModeEnabled = false;
+      });
+    }
+  }
+
+  single_mode_selector() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool single_mode = (prefs.getBool('single_mode') ?? false);
+    print(single_mode);
+    if (single_mode) {
+      setState(() {
+        isSingleModeEnabled = true;
+      });
+    } else {
+      setState(() {
+        isSingleModeEnabled = false;
       });
     }
   }
