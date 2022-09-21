@@ -27,15 +27,16 @@ class _HomePageState extends State<HomePage> {
     single_mode_selector();
   }
   bool isDarkModeEnabled = false;
-  static bool isSingleModeEnabled = false;
-
-
-
+  bool isSingleModeEnabled = false;
+  int rrrr=3;
 
 
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
+  TextStyle(fontSize:30, fontWeight: FontWeight.w600);
+
+
+
   static final List<Widget> _widgetOptions = <Widget>[
     Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -64,7 +65,7 @@ class _HomePageState extends State<HomePage> {
               height: 650,
               child: GridView.builder(
                 gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: isSingleModeEnabled ? 1 : 2,
+                  crossAxisCount: 2,
                   childAspectRatio: 1,
                   mainAxisSpacing: 15,
                   crossAxisSpacing: 15,
@@ -137,7 +138,7 @@ class _HomePageState extends State<HomePage> {
       ),
     ),
     const Text(
-      'Favourites',
+      'Vegetables are hidden!',
       style: optionStyle,
     ),
 
@@ -253,7 +254,7 @@ class _HomePageState extends State<HomePage> {
                 duration: const Duration(milliseconds: 400),
                 tabBackgroundColor: Colors.grey[100]!,
                 color: Colors.black,
-                tabs: const [
+                tabs:  [
                   GButton(
                     icon: LineIcons.fruitApple,
                     text: 'Fruits',
@@ -262,14 +263,29 @@ class _HomePageState extends State<HomePage> {
                     icon: Icons.kebab_dining,
                     text: 'Vegetables',
                   ),
-                  GButton(
-                    icon: LineIcons.heart,
-                    text: 'Favourite',
-                  ),
+
+                  // GButton(
+                  //   icon: LineIcons.heart,
+                  //   text: 'Favourite',
+                  // ),
                 ],
                 selectedIndex: _selectedIndex,
                 onTabChange: (index) {
                   setState(() {
+                    if(isSingleModeEnabled){
+                      if(index==1){
+                        index = 2;
+                      }
+                      else{
+                        index = index;
+                      }
+                    }
+                    else{
+                      index = index;
+                    }
+                    //index==1?index=2:index=index;
+
+
                     _selectedIndex = index;
                   });
                 },

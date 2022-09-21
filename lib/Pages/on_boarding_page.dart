@@ -64,15 +64,15 @@ class MyHome extends StatelessWidget {
       pageBackgroundColor: Colors.white,
       background: [
         Image.asset(
-          'assets/images/shuvo.jpg',
+          'assets/images/on_boarding_image/fruit.png',
           height: 400,
         ),
         Image.asset(
-          'assets/images/rownok.png',
+          'assets/images/on_boarding_image/vege.png',
           height: 400,
         ),
         Image.asset(
-          'assets/images/maliha.jpg',
+          'assets/images/on_boarding_image/seting.png',
           height: 400,
         ),
       ],
@@ -88,7 +88,7 @@ class MyHome extends StatelessWidget {
                 height: 480,
               ),
               Text(
-                'On your way...',
+                'Click here to see the list of fruits',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: kDarkBlueColor,
@@ -100,7 +100,7 @@ class MyHome extends StatelessWidget {
                 height: 20,
               ),
               const Text(
-                'to find the perfect looking Onboarding for your app?',
+                'You can click on the fruit to see the details of the fruit',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black26,
@@ -121,7 +121,7 @@ class MyHome extends StatelessWidget {
                 height: 480,
               ),
               Text(
-                'You’ve reached your destination.',
+                'Click here to see the list of vegetables',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: kDarkBlueColor,
@@ -133,7 +133,7 @@ class MyHome extends StatelessWidget {
                 height: 20,
               ),
               const Text(
-                'Sliding with animation',
+                'You can click on the vegetable to see the details of the vegetable',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black26,
@@ -154,7 +154,7 @@ class MyHome extends StatelessWidget {
                 height: 480,
               ),
               Text(
-                'Start now!',
+                'In setting you can change few things',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: kDarkBlueColor,
@@ -166,7 +166,7 @@ class MyHome extends StatelessWidget {
                 height: 20,
               ),
               const Text(
-                'Where everything is possible and customize your onboarding.',
+                'enable dark mode to change the theme of the app. you can also hide vegetables by eanbling hide vegetables',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.black26,

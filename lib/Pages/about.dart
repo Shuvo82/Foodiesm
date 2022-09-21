@@ -72,8 +72,7 @@ class _AboutState extends State<About> {
               ),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Text(
-                    " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil error, illum molestiae aliquam quos quae exercitationem dolores labore ullam rem eos delectus maxime voluptatibus ipsam blanditiis. Ut amet voluptatibus obcaecati.",
+                child: Text("Foodiesm is a food information app. In this app you see many kinds of fruits and vegetables nutrition value and other information. ",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,

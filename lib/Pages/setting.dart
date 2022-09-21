@@ -78,7 +78,7 @@ class _SettingsState extends State<Settings> {
                   },
                   initialValue: isSingleModeEnabled,
                   leading: const Icon(Icons.calendar_view_day),
-                  title: const Text('Single Column  mode'),
+                  title: const Text('Hide vegetables'),
                 ),
               ],
             ),
